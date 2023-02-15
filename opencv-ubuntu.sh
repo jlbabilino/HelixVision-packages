@@ -13,16 +13,14 @@ pip3 install numpy
 git clone 'https://github.com/opencv/opencv'
 cd opencv
 git checkout 4.7.0
-mkdir build
-cd build
 
 # Run CMake build
-cmake -D PYTHON_EXECUTABLE=/usr/bin/python3 
+cmake -S . -B build
+      -D PYTHON_EXECUTABLE=/usr/bin/python3 
       -D BUILD_NEW_PYTHON_SUPPORT=ON 
       -D BUILD_opencv_python3=ON 
       -D HAVE_opencv_python3=ON 
       -D WITH_TBB=ON
       -D WITH_OPENMP=ON
-      -D ENABLE_LTO=ON ..
-make -j8
-sudo make install
+      -D ENABLE_LTO=ON
+sudo cmake --build build --target install
