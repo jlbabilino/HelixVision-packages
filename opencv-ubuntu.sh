@@ -11,6 +11,7 @@ pip3 install numpy
 
 # Download OpenCV source
 git clone 'https://github.com/opencv/opencv'
+cd opencv
 git checkout 4.7.0
 mkdir build
 cd build
