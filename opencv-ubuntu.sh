@@ -1,8 +1,5 @@
 #!/bin/bash
 
-mkdir -p ~/opencv
-cd ~/opencv
-
 # OpenCV/build dependencies
 sudo apt install cmake build-essential pkg-config libgtk3-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev gfortran openexr libatlas-base-dev python3-dev python3-numpy
 
