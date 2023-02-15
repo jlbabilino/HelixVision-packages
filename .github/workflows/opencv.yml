@@ -1,0 +1,17 @@
+name: OpenCV
+
+on: push
+
+jobs:
+  build-ubuntu:
+    name: Build - Ubuntu
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build script
+        run: chmod +x opencv-ubuntu.sh;./opencv-ubuntu.sh
+
+      - name: Display structure of downloaded files
+        run: cd ~/opencv;ls -R
