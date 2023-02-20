@@ -23,4 +23,5 @@ cmake -S . -B build
       -D WITH_TBB=ON
       -D WITH_OPENMP=ON
       -D ENABLE_LTO=ON
+      -D CMAKE_INSTALL_PREFIX=./installdir
 sudo cmake --build build --target install
