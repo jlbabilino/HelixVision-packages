@@ -15,13 +15,5 @@ cd opencv
 git checkout 4.7.0
 
 # Run CMake build
-cmake -S . -B build
-      -D PYTHON_EXECUTABLE=/usr/bin/python3 
-      -D BUILD_NEW_PYTHON_SUPPORT=ON 
-      -D BUILD_opencv_python3=ON 
-      -D HAVE_opencv_python3=ON 
-      -D WITH_TBB=ON
-      -D WITH_OPENMP=ON
-      -D ENABLE_LTO=ON
-      -D CMAKE_INSTALL_PREFIX=./installdir
+cmake -S . -B build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DBUILD_NEW_PYTHON_SUPPORT=ON -DBUILD_opencv_python3=ON -DHAVE_opencv_python3=ON -DWITH_TBB=ON -DWITH_OPENMP=ON -DENABLE_LTO=ON -DCMAKE_INSTALL_PREFIX=./installdir
 sudo cmake --build build --target install
